@@ -2,14 +2,24 @@ body {
     background-color: darkgrey;
 }
 
-h1 {
+h1, h2 {
     color: darkgreen;
     font-family: "Century Gothic", Verdana;
     text-align: center;
+}
+
+h2 {
+    color: darkblue;
 }
 
 .div1 {
     font-size: 25px;
     font-family: "Courier New, Courier, monospace", Arial;
     text-align: center;
+}
+
+.not-purchased {
+    font-weight: bold;
+    text-align: center;
+    font-family: "Century Gothic", Verdana;
 }

@@ -1,0 +1,6 @@
+<h2>Shopping List</h2>
+<link rel="stylesheet" type="text/css" href="styles/main.css"/>
+<div *ngFor="#item of list" 
+    [class.not-purchased]="!item.purchased">
+    &raquo;&nbsp;{{item.name}}
+</div>

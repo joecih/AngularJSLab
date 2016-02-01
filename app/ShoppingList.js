@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/platform/browser', './ShoppingList'], function(exports_1) {
+System.register(['angular2/core'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,40 +8,35 @@ System.register(['angular2/core', 'angular2/platform/browser', './ShoppingList']
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, browser_1, ShoppingList_1;
-    var AppComponent;
+    var core_1;
+    var ShoppingList;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (browser_1_1) {
-                browser_1 = browser_1_1;
-            },
-            function (ShoppingList_1_1) {
-                ShoppingList_1 = ShoppingList_1_1;
             }],
         execute: function() {
-            // @Component({
-            //     selector: 'my-app',
-            //     templateUrl: 'views/template1.html'
-            // })
-            AppComponent = (function () {
-                function AppComponent() {
+            ShoppingList = (function () {
+                function ShoppingList() {
+                    this.list = [{
+                            name: "Apples",
+                            purchased: false
+                        }, {
+                            name: "Oranges",
+                            purchased: true
+                        }];
                 }
-                AppComponent = __decorate([
+                ShoppingList = __decorate([
                     core_1.Component({
-                        selector: 'my-app',
-                        template: '<h1>Hello, Angular 2 World!</h1><shopping-list></shopping-list>',
-                        directives: [ShoppingList_1.ShoppingList]
+                        selector: "shopping-list",
+                        templateUrl: "ShoppingList.html"
                     }), 
                     __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
+                ], ShoppingList);
+                return ShoppingList;
             })();
-            exports_1("AppComponent", AppComponent);
-            browser_1.bootstrap(AppComponent);
+            exports_1("ShoppingList", ShoppingList);
         }
     }
 });
-//# sourceMappingURL=app.js.map
+//# sourceMappingURL=ShoppingList.js.map
