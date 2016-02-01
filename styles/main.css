@@ -1,0 +1,15 @@
+body {
+    background-color: darkgrey;
+}
+
+h1 {
+    color: darkgreen;
+    font-family: "Century Gothic", Verdana;
+    text-align: center;
+}
+
+.div1 {
+    font-size: 25px;
+    font-family: "Courier New, Courier, monospace", Arial;
+    text-align: center;
+}
