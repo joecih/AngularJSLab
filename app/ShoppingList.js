@@ -18,14 +18,18 @@ System.register(['angular2/core'], function(exports_1) {
         execute: function() {
             ShoppingList = (function () {
                 function ShoppingList() {
-                    this.list = [{
-                            name: "Apples",
-                            purchased: false
-                        }, {
-                            name: "Oranges",
-                            purchased: true
-                        }];
+                    this.list = [];
                 }
+                ShoppingList.prototype.toggleItem = function (item) {
+                    item.purchased = !item.purchased;
+                };
+                ShoppingList.prototype.addItem = function () {
+                    this.list.push({
+                        name: this.newItem,
+                        purchased: false
+                    });
+                    this.newItem = '';
+                };
                 ShoppingList = __decorate([
                     core_1.Component({
                         selector: "shopping-list",

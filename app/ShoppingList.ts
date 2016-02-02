@@ -12,14 +12,22 @@ interface IListItem {
 export class ShoppingList {
 
     list: IListItem[];
+    newItem: string;
 
     constructor() {
-        this.list = [{
-            name: "Apples",
-            purchased: false
-        }, {
-            name: "Oranges",
-            purchased: true
-        }];        
+        this.list = [];        
     }
+    
+    toggleItem(item: IListItem): void {
+        item.purchased = !item.purchased;
+    }
+    
+    addItem(): void {
+        this.list.push({
+            name: this.newItem,
+            purchased: false
+        });
+        this.newItem = '';
+    }
+ 
 }
